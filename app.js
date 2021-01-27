@@ -9,7 +9,12 @@ addCoverBtn.addEventListener('click', function () {
     let coverQtyInput = parseFloat(document.querySelector('.add-cover-qty').value);
     let totalCoverQty = document.querySelector('.add-cover-qty').value = coverQtyInput + 1;
     // console.log(parseFloat(totalCoverQty));
+    // get total-cover-price 
+    var totalCoverPrice = parseFloat(document.querySelector('#total-cover-price').innerText);
 
+    totalCoverPrice = phonePerCoverPrice * totalCoverQty;
+    // console.log(totalCoverPrice);
+    document.querySelector('#total-cover-price').innerText = totalCoverPrice;
 })
 
 
@@ -18,12 +23,6 @@ addCoverBtn.addEventListener('click', function () {
 
 
 addPhoneQtyBtn.addEventListener('click', function () {
-    totalPhonePrice();
-
-    totalExpense(phonePrice, phoneCoverPrice);
-})
-
-function totalPhonePrice() {
     let phonePrice = 1219;
     // get add-product quantity value
     const productQty = parseInt(document.querySelector('.add-product-qty').value);
@@ -32,14 +31,14 @@ function totalPhonePrice() {
     // get phone price 
     const price = parseInt(document.querySelector('#iphone-price').innerText);
     // count total phone price 
-    let totalPhonePrice = document.querySelector('#iphone-price').innerText = totalPhoneQty * phonePrice;
-    return totalPhonePrice;
-}
+    document.querySelector('#iphone-price').innerText = totalPhoneQty * phonePrice;
+
+})
 
 
 
-function totalExpense(phonePrice, phoneCoverPrice) {
-    let totalExpense = parseFloat(document.querySelector('#totalExpense').innerText);
-    totalExpense = document.querySelector('#totalExpense').innerText = phonePrice + phoneCoverPrice;
-    return totalExpense;
+
+
+function subTotal(phonePrice, phoneCoverPrice) {
+
 }
