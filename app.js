@@ -10,7 +10,7 @@ document.querySelector('.addPhoneQtyBtn').addEventListener('click', function () 
     let totalPhonePrice = parseInt(document.querySelector('#iphone-price').innerText);
     // total Phone Price 
     totalPhonePrice = totalPhoneQty * 1219;
-
+    // console.log(typeof totalPhonePrice);
     // set total price in the innerText 
-    // document.querySelector('iphone-price').innerText = totalPhonePrice;
+    document.querySelector('#iphone-price').innerText = totalPhonePrice;
 })
