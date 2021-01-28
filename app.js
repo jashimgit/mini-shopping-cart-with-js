@@ -14,3 +14,14 @@ document.querySelector('.addPhoneQtyBtn').addEventListener('click', function () 
     // set total price in the innerText 
     document.querySelector('#iphone-price').innerText = totalPhonePrice;
 })
+
+document.querySelector('.removePhoneQtyBtn').addEventListener('click', function(){
+    // get current input qunantity
+    // console.log('remove btn cliked');
+    let phoneQty = parseInt(document.querySelector('.add-product-qty').value);
+    let totalPhoneQty = document.querySelector('.add-product-qty').value = phoneQty - 1;
+    // total Phone price 
+    totalPhonePrice = totalPhoneQty * 1219;
+    // set total price in the innerText 
+    document.querySelector('#iphone-price').innerText = totalPhonePrice;
+})
