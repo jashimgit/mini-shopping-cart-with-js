@@ -42,6 +42,7 @@ function totalCoverPrice(isIncrease) {
     totalCoverPrice = totalCoverQty * 59;
     // set total price to price area
     document.querySelector('#total-cover-price').innerText = totalCoverPrice;
+    subTotal()
 }
 
 function totalPhonePrice(isIncrease) {
@@ -63,5 +64,13 @@ function totalPhonePrice(isIncrease) {
     // console.log(typeof totalPhonePrice);
     // set total price in the innerText 
     document.querySelector('#iphone-price').innerText = totalPhonePrice;
+    subTotal()
 }
 
+function subTotal() {
+    let PhonePrice = parseInt(document.querySelector('#iphone-price').innerText);
+    let CoverPrice = parseInt(document.querySelector('#total-cover-price').innerText);
+    subTotalPrice = PhonePrice + CoverPrice;
+    document.getElementById('sub-total').innerText = subTotalPrice;
+
+}
